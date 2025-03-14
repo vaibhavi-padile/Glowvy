@@ -1,0 +1,37 @@
+name:- Glowvy
+
+fonts-------------
+logo :-Great Vibes
+navbar :- Marcellus
+headings:-Montserrat 
+subheadings:-sans-serif
+paragraphs:-Merriweather 
+
+
+Shop by Season: Dropdown menu with options for Spring, Summer, Fall, Winter.
+
+Shop by Skin Type: Dropdown menu with options for Dry, Oily, Combination, Sensitive, Normal, Acne-Prone.
+
+
+shop by Season: Spring, Summer, Fall, Winter.
+
+shop by Skin Type: Dry, Oily, Combination, Sensitive, Normal, Acne-Prone.
+
+shop by Product Type: Cleanser, Moisturizer, Serum, Sunscreen, etc.
+
+
+Skincare Challenges: Launch monthly skincare challenges where users can participate, share their progress, and win prizes.
+
+
+
+Seasonal Promotions: Create seasonal collections or limited edition products that align with holidays, seasons, or special events.
+
+
+Step-by-Step Guides: Provide step-by-step guides or infographics for using products, especially for multi-step routines.
+
+
+Blog & Skincare Guides: Share expert tips, routines, and skincare myths vs. facts.
+
+Provide a skin type quiz to recommend suitable products.
+
+

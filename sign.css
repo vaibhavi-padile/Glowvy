@@ -1,0 +1,161 @@
+/* GENEREL STYLLING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.body {
+    background-color: #e8e2d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+}
+/* PAGE STYLLING */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+/* LEFT ARROW STYLLING */
+.arrow {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    color: #fff;
+    position: relative;
+}
+.logo {
+    font-size: 40px;
+    font-family: 'petit formal script';
+    color: #fff;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 28px;
+    font-family: 'marcellus';
+    margin-bottom: 20px;
+    color: #fff;
+}
+/* FORM STYLLING */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'marcellus';
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+input::placeholder {
+    color: #ccc;
+    font-family: 'marcellus';
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #fff;
+    color: #006666;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: 'marcellus';
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+.social-login {
+    margin-top: 20px;
+    color: #fff;
+}
+
+.social-login p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-family: 'marcellus';
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    font-family: 'marcellus';
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+
+}
+
+.social-icons a:hover {
+    opacity: 0.8;
+}
+
+.signin-link {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #fff;
+    font-family: 'marcellus';
+}
+
+.signin-link a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'marcellus';
+
+}
+
+.signin-link a:hover {
+    text-decoration: underline;
+}

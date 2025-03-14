@@ -1,0 +1,329 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: rgb(235, 227, 218);
+}
+
+/* NAVBAR STYLING */
+.nav {
+    display: flex;
+    font-size: 1.3rem;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 4rem;
+    padding-right: 3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.7rem;
+    background-color: rgb(235, 227, 218);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav i:hover {
+    color: rgb(214, 151, 78);
+    transform: scale(1.2);
+}
+
+/* NAV LOGO STYLING */
+.nav h1 {
+    font-size: 2.5rem;
+    margin-left: 35rem;
+    margin-right: 35rem;
+    font-family: 'Petit Formal Script';
+    font-weight: 900;
+}
+
+.nav a {
+    color: #333;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Navbar hover effect */
+.navbar:hover {
+    background-color: rgb(212, 179, 141);
+}
+
+/* PANEL STYLING */
+.panel {
+    padding-left: 31rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    background-color: rgb(235, 227, 218);
+}
+
+/* Panel links */
+.panel a {
+    font-family: 'marcellus';
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+}
+
+/* Hover effect for panel links */
+.panel #a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(214, 151, 78);
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.panel #a:hover::before {
+    transform: scaleX(1);
+}
+
+/* Dropdown menu styling */
+.shop-by {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Dropdown container */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    border: 1px solid #cfcece;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+.shop-by:hover .dropdown {
+    display: block;
+}
+
+.dropdown:hover {
+    display: block;
+}
+
+/* Dropdown links styling */
+.dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    border-bottom: none;
+    border-radius: 8px;
+    background-color: white;
+}
+
+/* Remove border from last item */
+.dropdown a:last-child {
+    border-bottom: none;
+}
+
+/* Hover effect for dropdown links */
+.dropdown a:hover {
+    color: rgb(214, 151, 78);
+
+}
+.dropdown::-webkit-scrollbar {
+    display: none;
+}
+/* Article Navigation */
+.article-nav {
+    max-width: 1500px;
+    margin: 20px auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    font-family: 'marcellus';
+}
+
+.article-nav ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 20px;
+    padding: 5px;
+}
+
+.article-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.article-nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: rgb(214, 151, 78);
+    transition: width 0.3s ease;
+}
+
+.article-nav ul li a:hover::after,
+.article-nav ul li a.active::after {
+    width: 100%;
+}
+
+.article-nav ul li a:hover,
+.article-nav ul li a.active {
+    color: rgb(214, 151, 78);
+}
+
+/* Article Container */
+.article-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.article-content {
+    display: none;
+    /* Hide all articles by default */
+}
+
+.article-content.active {
+    display: block;
+    /* Show only the active article */
+}
+
+.article-image {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.article-image img {
+    width: 100%;
+    height: 130%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.article-text {
+    padding: 20px 0;
+}
+
+.article-title {
+    font-family: 'marcellus';
+    font-size: 32px;
+    margin: 20px 0;
+    text-align: center;
+    color: #333;
+}
+
+.article-meta {
+    font-family: 'marcellus';
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.article-body {
+    font-family: 'advent pro';
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.article-body h2 {
+    font-weight: 450;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-links li a {
+        font-size: 12px;
+    }
+
+    .article-image {
+        height: 300px;
+    }
+
+    .article-title {
+        font-size: 24px;
+    }
+
+    .article-body {
+        font-size: 14px;
+    }
+
+    .article-nav ul li a {
+        font-size: 12px;
+        padding: 3px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links li a {
+        font-size: 10px;
+    }
+
+    .article-image {
+        height: 200px;
+    }
+
+    .article-title {
+        font-size: 20px;
+    }
+
+    .article-meta {
+        font-size: 12px;
+    }
+
+    .article-body {
+        font-size: 13px;
+    }
+
+    .article-nav ul li a {
+        font-size: 10px;
+        padding: 2px 6px;
+    }
+}

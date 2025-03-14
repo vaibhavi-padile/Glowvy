@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Petit+Formal+Script&display=swap"
+        rel="stylesheet">
+
+
+
+    <title>Skin Type Quiz</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 20px;
+
+        }
+
+        .quiz-container {
+            max-width: 400px;
+            margin: auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            display: none;
+            font-family: 'Marcellus';
+        }
+
+        .question {
+            margin-bottom: 20px;
+            font-family: 'Marcellus';
+        }
+
+        .options button {
+            display: block;
+            width: 100%;
+            margin: 8px 0;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            background-color: #f3f3f3;
+            font-family: 'Marcellus';
+        }
+
+        .options button:hover {
+            background-color: rgb(213, 160, 98);
+        }
+
+        .toggle-btn {
+            background-color: rgb(214, 151, 78);
+            color: white;
+            padding: 20px 20px;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            margin-top: 1.5rem;
+            font-family: 'Marcellus';
+        }
+
+        #next {
+            padding: 12px;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            font-family: 'Marcellus';
+            margin: 1rem;
+            margin-left: 9rem;
+            align-items: center;
+        }
+
+        h1 {
+            font-family: 'Marcellus';
+            font-size: 1.3rem;
+            color: #555;
+        }
+
+        .arrow {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            margin-right: 95rem;
+            color: #555;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="icon">
+        <a href="index.html"><i class="fa-solid fa-arrow-left-long arrow"></i></a>
+    </div>
+    <h1>Not sure about your skin type? Take our quick quiz to discover the perfect match for your skin!</h1>
+
+    <button class="toggle-btn" onclick="toggleQuiz()">Take the Skin Type Quiz</button>
+    <div class="quiz-container" id="quiz-container">
+        <h2>Find Your Skin Type</h2>
+        <div id="quiz">
+            <div id="question" class="question"></div>
+            <div id="options" class="options"></div>
+        </div>
+        <button id="next" onclick="nextQuestion()" style="display:none;">Next</button>
+        <div id="result" style="display:none;"></div>
+    </div>
+
+    <script>
+        function toggleQuiz() {
+            const quizContainer = document.getElementById("quiz-container");
+            quizContainer.style.display = (quizContainer.style.display === "none" || quizContainer.style.display === "") ? "block" : "none";
+        }
+
+        const questions = [
+            {
+                question: "How does your skin feel after washing it?",
+                options: {
+                    "Oily": "oily",
+                    "Dry": "dry",
+                    "Normal": "normal",
+                    "Combination (Oily T-zone, Dry Cheeks)": "combination",
+                    "Sensitive": "sensitive"
+                }
+            },
+            {
+                question: "Does your skin get shiny throughout the day?",
+                options: {
+                    "Yes, very shiny": "oily",
+                    "No, it stays the same": "dry",
+                    "Only in T-zone": "combination",
+                    "It gets red instead": "sensitive",
+                    "Balanced all day": "normal"
+                }
+            },
+            {
+                question: "How often do you experience breakouts?",
+                options: {
+                    "Frequently": "oily",
+                    "Rarely": "dry",
+                    "Occasionally": "normal",
+                    "Only in T-zone": "combination",
+                    "Only with new products": "sensitive"
+                }
+            },
+            {
+                question: "What describes your pores best?",
+                options: {
+                    "Large and visible": "oily",
+                    "Small and barely visible": "dry",
+                    "Medium size, visible in T-zone": "combination",
+                    "Red and inflamed easily": "sensitive",
+                    "Balanced, not too visible": "normal"
+                }
+            },
+            {
+                question: "How does your skin feel at the end of the day?",
+                options: {
+                    "Oily and greasy": "oily",
+                    "Tight and dry": "dry",
+                    "Normal, no change": "normal",
+                    "Irritated and itchy": "sensitive",
+                    "Oily in T-zone, dry elsewhere": "combination"
+                }
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let scores = { oily: 0, dry: 0, normal: 0, sensitive: 0, combination: 0 };
+
+        function loadQuestion() {
+            const questionElement = document.getElementById("question");
+            const optionsElement = document.getElementById("options");
+            const nextButton = document.getElementById("next");
+            questionElement.textContent = questions[currentQuestionIndex].question;
+            optionsElement.innerHTML = "";
+
+            // for (const [key, value] of Object.entries(questions[currentQuestionIndex].options)) {
+            //     const button = document.createElement("button");
+            //     button.textContent = key;
+            //     button.onclick = function () { selectAnswer(value, this); };
+            //     optionsElement.appendChild(button);
+            // }
+
+
+            for (const [key, value] of Object.entries(questions[currentQuestionIndex].options)) {
+    const button = document.createElement("button");
+    button.textContent = key;
+    button.onclick = function () { selectAnswer(value, this); };
+    optionsElement.appendChild(button);
+}
+
+
+
+            nextButton.style.display = "none";
+        }
+
+        // function selectAnswer(type, button) {
+        //     scores[type]++;
+
+        //     // Remove active class from all buttons
+        //     const buttons = document.querySelectorAll("#options button");
+        //     buttons.forEach(btn => btn.style.backgroundColor = "");
+
+        //     // Change background color of selected button
+        //     button.style.backgroundColor = "rgb(214, 151, 78)"; // Gold color (change to your preferred color)
+
+        //     document.getElementById("next").style.display = "block";
+        // }
+
+
+
+        function selectAnswer(type, button) {
+    scores[type]++;
+    
+    // Reset styles for all buttons
+    const buttons = document.querySelectorAll("#options button");
+    buttons.forEach(btn => {
+        btn.style.backgroundColor = ""; // Reset background
+        btn.style.color = ""; // Reset text color
+    });
+
+    // Change background and text color of the selected button
+    button.style.backgroundColor = "rgb(214, 151, 78)"; // Gold background
+    button.style.color = "#fff"; // Black text (change if needed)
+
+    document.getElementById("next").style.display = "block";
+}
+
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                loadQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            let maxScore = 0;
+            let skinType = "";
+            for (const [type, score] of Object.entries(scores)) {
+                if (score > maxScore) {
+                    maxScore = score;
+                    skinType = type;
+                }
+            }
+            document.getElementById("quiz").style.display = "none";
+            document.getElementById("result").style.display = "block";
+            document.getElementById("result").innerHTML = `<h3>Your Skin Type: ${skinType.charAt(0).toUpperCase() + skinType.slice(1)}</h3>`;
+
+            // Redirect to home page after 3 seconds
+            setTimeout(() => {
+                window.location.href = "skintype.html";  // Change "skintype.html" to your actual home page URL
+            }, 4000);
+        }
+
+        loadQuestion();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,645 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Petit+Formal+Script&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="seasons.css">
+    <title>Shop by season</title>
+</head>
+
+<body>
+    <!--navbar section-->
+    <header>
+        <div class="navbar">
+            <nav class="nav">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <h1>Glowvy</h1>
+                <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+                <a href="sign-up.html"><i class="fa-solid fa-user"></i></a>
+            </nav>
+        </div>
+        <!-- PANEL -->
+        <div class="panel">
+            <a href="index.html#Home" id="a">Home</a>
+            <a href="index.html#About" id="a">Explore</a>
+            <div class="shop-by">
+                <a id="a">Shop</a>
+                <div class="dropdown" id="nav">
+                    <a href="skintype.html">Shop by Skin-type</a>
+                    <a href="seasons.html">Shop by Season</a>
+                </div>
+            </div>
+            <a href="index.html#blog" id="a">Blog</a>
+            <a href="contact.html" id="a">Connect</a>
+            <a href="quiz.html" id="a">Quiz</a>
+        </div>
+    </header>
+    <!-- CHOOSE A SEASON -->
+    <div class="seasons">
+        <a href="#summer"> <img src="seasons/summer.jpg" alt="Summer">
+            <span>Summer</span> </a>
+
+        <a href="#winter"> <img src="seasons/winter.jpg" alt="Winter">
+            <span>Winter</span></a>
+
+        <a href="#rainy"><img src="seasons/mansoon.jpg" alt="Oily-skin">
+            <span>Mansoon</span> </a>
+    </div>
+
+    <!-- SUMMER SEASON PRODUCTS -->
+    <section class="summer" id="summer">
+
+        <div class="products">
+            <div class="product-item" id="1">
+                <div class="image" style="background-image: url('seasons/summer/1.Best\ sunscreen.png');"></div>
+                <h3>Lightweight Sunscreen SPF 50+</h3>
+                <p>Brand : La Roche-Posay</p>
+                <p>Rs. 2,000</p>
+                <button class="shop-btn" data-id="1">Shop now</button>
+            </div>
+
+            <div class="product-item" id="2">
+                <div class="image"
+                    style="background-image: url('seasons/summer/2.Plum\ Green\ Tea\ Oil_Free\ Moisturizer.png');">
+                </div>
+                <h3>Oil-Free Moisturizer</h3>
+                <p>Brand : Plum</p>
+                <p>Rs. 600</p>
+                <button class="shop-btn" data-id="2">Shop now</button>
+            </div>
+
+            <div class="product-item" id="10">
+                <div class="image"
+                    style="background-image: url('seasons/summer/10.Neutrogena\ Hyaluronic\ Acid\ -\ 50ml.png');"></div>
+                <h3>Lightweight Gel Cream</h3>
+                <p>Brand : Neutrogena</p>
+                <p>Rs. 800</p>
+                <button class="shop-btn" data-id="10">Shop now</button>
+            </div>
+
+            <div class="product-item" id="4">
+                <div class="image"
+                    style="background-image: url('seasons/summer/4.Smashbox\ Mattifying\ Primer\ 30mL.png');"></div>
+                <h3>Mattifying Primer</h3>
+                <p>Brand : Smashbox</p>
+                <p>Rs. 3,000</p>
+                <button class="shop-btn" data-id="4">Shop now</button>
+            </div>
+
+            <div class="product-item" id="5">
+                <div class="image"
+                    style="background-image: url('seasons/summer/5.Himalayan\ Charcoal\ Purifying\ Clay\ Wash\ 125\ ml.png');">
+                </div>
+                <h3>Charcoal Face Wash</h3>
+                <p>Brand : The Body Shop</p>
+                <p>Rs. 800</p>
+                <button class="shop-btn" data-id="5">Shop now</button>
+            </div>
+
+            <div class="product-item" id="6">
+                <div class="image"
+                    style="background-image: url('seasons/summer/6.Forest\ Essentials\ Body\ Mist\ Parijat.png');">
+                </div>
+                <h3>Hydrating Mist</h3>
+                <p>Brand : Forest Essentials</p>
+                <p>Rs. 1,800</p>
+                <button class="shop-btn" data-id="6">Shop now</button>
+            </div>
+
+            <div class="product-item" id="7">
+                <div class="image" style="background-image: url('seasons/summer/7.Sephora.png');"></div>
+                <h3>Green Tea Toner</h3>
+                <p>Brand : Innisfree</p>
+                <p>Rs. 1,200</p>
+                <button class="shop-btn" data-id="7">Shop now</button>
+            </div>
+
+            <div class="product-item" id="8">
+                <div class="image"
+                    style="background-image: url('seasons/summer/8.Minimalist\ Vitamin\ C\ face\ serum.png');"></div>
+                <h3>Vitamin C Serum</h3>
+                <p>Brand : Minimalist</p>
+                <p>Rs. 900</p>
+                <button class="shop-btn" data-id="8">Shop now</button>
+            </div>
+
+            <div class="product-item" id="9">
+                <div class="image"
+                    style="background-image: url('seasons/summer/9.Lotus\ Herbals\ Facewash\ -\ 100\ g.png');"></div>
+                <h3>Oil-Control Gel</h3>
+                <p>Brand : Lotus Herbals</p>
+                <p>Rs. 400</p>
+                <button class="shop-btn" data-id="9">Shop now</button>
+            </div>
+
+            <div class="product-item" id="3">
+                <div class="image"
+                    style="background-image: url('seasons/summer/3.WOW\ Skin\ Science\ Aloe\ Vera.png');"></div>
+                <h3>Aloe Vera Gel</h3>
+                <p>Brand : Wow Skin Science</p>
+                <p>Rs. 400</p>
+                <button class="shop-btn" data-id="3">Shop now</button>
+            </div>
+
+            <div class="product-item" id="11">
+                <div class="image"
+                    style="background-image: url('seasons/summer/11.Mamaearth\ Sunscreen\ SPF\ 50\ PA+++\ 50\ gm.png');">
+                </div>
+                <h3>Sunscreen Stick</h3>
+                <p>Brand : Mamaearth</p>
+                <p>Rs. 500</p>
+                <button class="shop-btn" data-id="11">Shop now</button>
+            </div>
+
+            <div class="product-item" id="12">
+                <div class="image"
+                    style="background-image: url('seasons/summer/12.Kiehl\'s\ Rare\ Earth\ Clay\ Mask.png');"></div>
+                <h3>Purifying Clay Mask</h3>
+                <p>Brand : Kiehl's</p>
+                <p>Rs. 2,500</p>
+                <button class="shop-btn" data-id="12">Shop now</button>
+            </div>
+
+            <div class="product-item" id="13">
+                <div class="image"
+                    style="background-image: url('seasons/summer/13.tea\ tree\ face\ wash\ -\ just\ herbs.png');"></div>
+                <h3>Tea Tree Face Wash</h3>
+                <p>Brand : Just Herbs</p>
+                <p>Rs. 1,000</p>
+                <button class="shop-btn" data-id="13">Shop now</button>
+            </div>
+
+            <div class="product-item" id="14">
+                <div class="image"
+                    style="background-image: url('seasons/summer/14.Clinique\ Moisture\ Surge\ Face\ Spray\ 125ml.png');">
+                </div>
+                <h3>Cooling Face Mist</h3>
+                <p>Brand : Clinique</p>
+                <p>Rs. 2,200</p>
+                <button class="shop-btn" data-id="14">Shop now</button>
+            </div>
+
+            <div class="product-item" id="15">
+                <div class="image"
+                    style="background-image: url('seasons/summer/15.Neutrogena\ Spectrum\ Sunscreen.png');"></div>
+                <h3>Oil-Free Sunscreen</h3>
+                <p>Brand : Neutrogena</p>
+                <p>Rs. 600</p>
+                <button class="shop-btn" data-id="15">Shop now</button>
+            </div>
+
+            <div class="product-item" id="16">
+                <div class="image" style="background-image: url('seasons/summer/16._NiacinamideSerum30ml_.png');"></div>
+                <h3>Hydrating Serum</h3>
+                <p>Brand : Suganda</p>
+                <p>Rs. 1,200</p>
+                <button class="shop-btn" data-id="16">Shop now</button>
+            </div>
+
+            <div class="product-item" id="17">
+                <div class="image" style="background-image: url('seasons/summer/17.pore\ toner\ by\ kiehls.png');">
+                </div>
+                <h3>Pore-Refining Toner</h3>
+                <p>Brand : Kiehl's</p>
+                <p>Rs. 2,000</p>
+                <button class="shop-btn" data-id="17">Shop now</button>
+            </div>
+
+            <div class="product-item" id="18">
+                <div class="image" style="background-image: url('seasons/summer/18.Cetaphil\ US.png');"></div>
+                <h3>Lightweight Moisturizer</h3>
+                <p>Brand : Cetaphil</p>
+                <p>Rs. 1,000</p>
+                <button class="shop-btn" data-id="18">Shop now</button>
+            </div>
+
+            <div class="product-item" id="19">
+                <div class="image"
+                    style="background-image: url('seasons/summer/19.Biotique\ Bio\ Sunscreen\ 190ml.png');"></div>
+                <h3>Sun Protection Cream</h3>
+                <p>Brand : Biotique</p>
+                <p>Rs. 300</p>
+                <button class="shop-btn" data-id="19">Shop now</button>
+            </div>
+
+            <div class="product-item" id="20">
+                <div class="image"
+                    style="background-image: url('seasons/summer/20.Cooling\ Gel\ Pilgrim\ 800\ Medium.png');"></div>
+                <h3>Cooling Gel</h3>
+                <p>Brand : Pilgrim</p>
+                <p>Rs. 800</p>
+                <button class="shop-btn" data-id="20">Shop now</button>
+            </div>
+        </div>
+    </section>
+    <!-- WINTER SEASON PRODUCTS -->
+    <section class="winter" id="winter">
+
+        <div class="products">
+            <div class="product-item" id="1">
+                <div class="image"
+                    style="background-image: url('seasons/Winter/1.\ Rich\ Moisturizing\ Cream\ CeraVe.png');"></div>
+                <h3>Rich Moisturizing Cream</h3>
+                <p>Brand : CeraVe</p>
+                <p>Rs. 2,000</p>
+                <button class="shop-btn" data-id="1">Shop now</button>
+            </div>
+
+            <div class="product-item" id="2">
+                <div class="image"
+                    style="background-image: url('seasons/Winter/2.\ Shea\ Butter\ Cream\ The\ Body\ Shop.png');"></div>
+                <h3>Shea Butter Cream</h3>
+                <p>Brand : The Body Shop</p>
+                <p>Rs. 1,500</p>
+                <button class="shop-btn" data-id="2">Shop now</button>
+            </div>
+
+            <div class="product-item" id="3">
+                <div class="image"
+                    style="background-image: url('seasons/Winter/3.\ Hydrating\ Night\ Mask\ Laneige.png');"></div>
+                <h3>Hydrating Night Mask</h3>
+                <p>Brand : Laneige</p>
+                <p>Rs. 2,800</p>
+                <button class="shop-btn" data-id="3">Shop now</button>
+            </div>
+
+            <div class="product-item" id="4">
+                <div class="image"
+                    style="background-image: url('seasons/Winter/4.\ Almond\ Oil\ Cream\ Forest\ Essentials.png');">
+                </div>
+                <h3>Almond Oil Cream</h3>
+                <p>Brand : Forest Essentials</p>
+                <p>Rs. 2,200</p>
+                <button class="shop-btn" data-id="4">Shop now</button>
+            </div>
+
+            <div class="product-item" id="5">
+                <div class="image"
+                    style="background-image: url('seasons/Winter/5.\ Hyaluronic\ Acid\ Serum\ Minimalist.png');"></div>
+                <h3>Hyaluronic Acid Serum</h3>
+                <p>Brand : Minimalist</p>
+                <p>Rs. 700</p>
+                <button class="shop-btn" data-id="5">Shop now</button>
+            </div>
+
+            <div class="product-item" id="6">
+                <div class="image"
+                    style="background-image: url('seasons/Winter/6.\ Intense\ Hydration\ Lotion\ Cetaphil.png');"></div>
+                <h3>Intense Hydration Lotion</h3>
+                <p>Brand : Cetaphil</p>
+                <p>Rs. 1,200</p>
+                <button class="shop-btn" data-id="6">Shop now</button>
+            </div>
+
+            <div class="product-item" id="7">
+                <div class="image"
+                    style="background-image: url('seasons/Winter/7.\ Squalane\ Hydrating\ Cream\ Biossance.png');">
+                </div>
+                <h3>Squalane Hydrating Cream</h3>
+                <p>Brand : Biossance</p>
+                <p>Rs. 4,500</p>
+                <button class="shop-btn" data-id="7">Shop now</button>
+            </div>
+
+            <div class="product-item" id="8">
+                <div class="image"
+                    style="background-image: url('seasons/Winter/8.\ Overnight\ Repair\ Oil\ Kama\ Ayurveda.png');">
+                </div>
+                <h3>Overnight Repair Oil</h3>
+                <p>Brand : Kama Ayurveda</p>
+                <p>Rs. 2,500</p>
+                <button class="shop-btn" data-id="8">Shop now</button>
+            </div>
+
+            <div class="product-item" id="9">
+                <div class="image" style="background-image: url('seasons/Winter/9.\ Aloe\ Vera\ Gel\ Patanjali.png');">
+                </div>
+                <h3>Aloe Vera Gel</h3>
+                <p>Brand : Patanjali</p>
+                <p>Rs. 150</p>
+                <button class="shop-btn" data-id="9">Shop now</button>
+            </div>
+
+            <div class="product-item" id="10">
+                <div class="image"
+                    style="background-image: url('seasons/Winter/10.\ Barrier\ Repair\ Cream\ La\ Roche-Posay.png');">
+                </div>
+                <h3>Barrier Repair Cream</h3>
+                <p>Brand : La Roche-Posay</p>
+                <p>Rs. 2,500</p>
+                <button class="shop-btn" data-id="10">Shop now</button>
+            </div>
+
+            <div class="product-item" id="11">
+                <div class="image"
+                    style="background-image: url('seasons/Winter/11.\ Honey\ Moisturizer\ Just\ Herbs.png');"></div>
+                <h3>Honey Moisturizer</h3>
+                <p>Brand : Just Herbs</p>
+                <p>Rs. 1,000</p>
+                <button class="shop-btn" data-id="11">Shop now</button>
+            </div>
+
+            <div class="product-item" id="12">
+                <div class="image" style="background-image: url('seasons/Winter/12.\ Hydrating\ Toner\ Plum.png');">
+                </div>
+                <h3>Hydrating Toner</h3>
+                <p>Brand : Plum</p>
+                <p>Rs. 600</p>
+                <button class="shop-btn" data-id="12">Shop now</button>
+            </div>
+
+            <div class="product-item" id="13">
+                <div class="image"
+                    style="background-image: url('seasons/Winter/13.\ Luxury\ Face\ Oil\ Forest\ Essentials.png');">
+                </div>
+                <h3>Luxury Face Oil</h3>
+                <p>Brand : Forest Essentials</p>
+                <p>Rs. 3,500</p>
+                <button class="shop-btn" data-id="13">Shop now</button>
+            </div>
+
+            <div class="product-item" id="14">
+                <div class="image"
+                    style="background-image: url('seasons/Winter/14.\ Intense\ Hydration\ Mask\ Innisfree.png');"></div>
+                <h3>Intense Hydration Mask</h3>
+                <p>Brand : Innisfree</p>
+                <p>Rs. 1,200</p>
+                <button class="shop-btn" data-id="14">Shop now</button>
+            </div>
+
+            <div class="product-item" id="15">
+                <div class="image"
+                    style="background-image: url('seasons/Winter/15.\ Rosehip\ Night\ Cream\ Mamaearth.png');"></div>
+                <h3>Rosehip Night Cream</h3>
+                <p>Brand : Mamaearth</p>
+                <p>Rs. 500</p>
+                <button class="shop-btn" data-id="15">Shop now</button>
+            </div>
+
+            <div class="product-item" id="16">
+                <div class="image"
+                    style="background-image: url('seasons/Winter/16.\ Ultra-Rich\ Cream\ Kiehl\'s.png');"></div>
+                <h3>Ultra-Rich Cream</h3>
+                <p>Brand : Kiehl's</p>
+                <p>Rs. 3,000</p>
+                <button class="shop-btn" data-id="16">Shop now</button>
+            </div>
+
+            <div class="product-item" id="17">
+                <div class="image" style="background-image: url('seasons/Winter/17.\ Hydrating\ Serum\ Clinique.png');">
+                </div>
+                <h3>Hydrating Serum</h3>
+                <p>Brand : Clinique</p>
+                <p>Rs. 4,500</p>
+                <button class="shop-btn" data-id="17">Shop now</button>
+            </div>
+
+            <div class="product-item" id="18">
+                <div class="image"
+                    style="background-image: url('seasons/Winter/18.\ Cocoa\ Butter\ Lotion\ Palmer\'s.png');"></div>
+                <h3>Cocoa Butter Lotion</h3>
+                <p>Brand : Palmer's</p>
+                <p>Rs. 800</p>
+                <button class="shop-btn" data-id="18">Shop now</button>
+            </div>
+
+            <div class="product-item" id="19">
+                <div class="image"
+                    style="background-image: url('seasons/Winter/19.\ Moisture\ Surge\ Gel\ Clinique.png');"></div>
+                <h3>Moisture Surge Gel</h3>
+                <p>Brand : Clinique</p>
+                <p>Rs. 3,200</p>
+                <button class="shop-btn" data-id="19">Shop now</button>
+            </div>
+
+            <div class="product-item" id="20">
+                <div class="image"
+                    style="background-image: url('seasons/Winter/20.\ Winter\ Repair\ Cream\ Biotique.png');"></div>
+                <h3>Winter Repair Cream</h3>
+                <p>Brand : Biotique</p>
+                <p>Rs. 400</p>
+                <button class="shop-btn" data-id="20">Shop now</button>
+            </div>
+        </div>
+    </section>
+    <!-- MANSOON SEASON PRODUCTS -->
+    <section class="rainy" id="rainy">
+
+        <div class="products">
+            <div class="product-item" id="1">
+                <div class="image"
+                    style="background-image: url('seasons/rainy-season/1.Sebamed\ Liquid\ Face\ &\ Body\ Wash\ 200ml.png');">
+                </div>
+                <h3>Anti-Fungal Face Wash</h3>
+                <p>Brand : Sebamed</p>
+                <p>Rs. 1,000</p>
+                <button class="shop-btn" data-id="1">Shop now</button>
+            </div>
+
+            <div class="product-item" id="2">
+                <div class="image"
+                    style="background-image: url('seasons/rainy-season/2.Neutrogena\ Hyaluronic\ Acid\ -\ 50ml.png');">
+                </div>
+                <h3>Lightweight Gel Moisturizer</h3>
+                <p>Brand : Neutrogena</p>
+                <p>Rs. 800</p>
+                <button class="shop-btn" data-id="2">Shop now</button>
+            </div>
+
+            <div class="product-item" id="3">
+                <div class="image"
+                    style="background-image: url('seasons/rainy-season/3.Body\ Shop\ Tea\ Tree\ Mattifying\ Toner.png');">
+                </div>
+                <h3>Tea Tree Oil Toner</h3>
+                <p>Brand : The Body Shop</p>
+                <p>Rs. 1,200</p>
+                <button class="shop-btn" data-id="3">Shop now</button>
+            </div>
+
+            <div class="product-item" id="4">
+                <div class="image"
+                    style="background-image: url('seasons/rainy-season/4.Salicylic\ Acid\ Serum\ The\ Ordinary.png');">
+                </div>
+                <h3>Salicylic Acid Serum</h3>
+                <p>Brand : The Ordinary</p>
+                <p>Rs. 1,500</p>
+                <button class="shop-btn" data-id="3">Shop now</button>
+            </div>
+
+            <div class="product-item" id="5">
+                <div class="image"
+                    style="background-image: url('seasons/rainy-season/5.Lotus\ Herbals\ Sunscreen\ Spf\ 40\ Dailysunscreen.png');">
+                </div>
+                <h3>Oil-Free Sunscreen</h3>
+                <p>Brand : Lotus Herbals</p>
+                <p>Rs. 400</p>
+                <button class="shop-btn" data-id="5">Shop now</button>
+            </div>
+
+            <div class="product-item" id="6">
+                <div class="image"
+                    style="background-image: url('seasons/rainy-season/6.Innisfree\ Jeju\ Pore\ Clay\ Mask\ 100ml.png');">
+                </div>
+                <h3>Purifying Clay Mask</h3>
+                <p>Brand : Innisfree</p>
+                <p>Rs. 1,500</p>
+                <button class="shop-btn" data-id="6">Shop now</button>
+            </div>
+
+            <div class="product-item" id="7">
+                <div class="image"
+                    style="background-image: url('seasons/rainy-season/7.Forest\ Essentials\ Body\ Mist\ Parijat.png');">
+                </div>
+                <h3>Hydrating Mist</h3>
+                <p>Brand : Forest Essentials</p>
+                <p>Rs. 1,800</p>
+                <button class="shop-btn" data-id="7">Shop now</button>
+            </div>
+
+            <div class="product-item" id="8">
+                <div class="image"
+                    style="background-image: url('seasons/rainy-season/8.Forest\ Essentials\ mist\ Natural\ &\ Hydrati.png');">
+                </div>
+                <h3>Anti-Acne Gel</h3>
+                <p>Brand : Minimalist</p>
+                <p>Rs. 700</p>
+                <button class="shop-btn" data-id="8">Shop now</button>
+            </div>
+
+            <div class="product-item" id="9">
+                <div class="image" style="background-image: url('seasons/rainy-season/9.Minimalist.png');"></div>
+                <h3>Mattifying Primer</h3>
+                <p>Brand : Smashbox</p>
+                <p>Rs. 3,000</p>
+                <button class="shop-btn" data-id="9">Shop now</button>
+            </div>
+
+            <div class="product-item" id="10">
+                <div class="image"
+                    style="background-image: url('seasons/rainy-season/10.Smashbox\ Mattifying\ Primer\ 30mL.png');">
+                </div>
+                <h3>Lightweight Toner</h3>
+                <p>Brand : Plum</p>
+                <p>Rs. 600</p>
+                <button class="shop-btn" data-id="10">Shop now</button>
+            </div>
+
+            <div class="product-item" id="11">
+                <div class="image"
+                    style="background-image: url('seasons/rainy-season/11.Plum\ 1_5\ Vitamin\ C\ Toner\ with\ Mandarin.png');">
+                </div>
+                <h3>Fungal Acne Cream</h3>
+                <p>Brand : Candid</p>
+                <p>Rs. 200</p>
+                <button class="shop-btn" data-id="11">Shop now</button>
+            </div>
+
+            <div class="product-item" id="12">
+                <div class="image"
+                    style="background-image: url('seasons/rainy-season/12.Himalayan\ Charcoal\ Purifying\ Clay\ Wash\ 125\ ml.png');">
+                </div>
+                <h3>Oil-Control Serum</h3>
+                <p>Brand : Suganda</p>
+                <p>Rs. 1,200</p>
+                <button class="shop-btn" data-id="12">Shop now</button>
+            </div>
+
+            <div class="product-item" id="13">
+                <div class="image"
+                    style="background-image: url('seasons/rainy-season/13.Balancing\ Serum\ Suganda.png');"></div>
+                <h3>Hydrating Gel</h3>
+                <p>Brand : Clinique</p>
+                <p>Rs. 3,200</p>
+                <button class="shop-btn" data-id="13">Shop now</button>
+            </div>
+
+            <div class="product-item" id="14">
+                <div class="image"
+                    style="background-image: url('seasons/rainy-season/14.tea\ tree\ face\ wash\ -\ just\ herbs.png');">
+                </div>
+                <h3>Tea Tree Face Wash</h3>
+                <p>Brand : Just Herbs</p>
+                <p>Rs. 1,000</p>
+                <button class="shop-btn" data-id="14">Shop now</button>
+            </div>
+
+            <div class="product-item" id="15">
+                <div class="image"
+                    style="background-image: url('seasons/rainy-season/15.Boroline-\ A\ Super\ Saviour\ for\ Dry\ Skin.png');">
+                </div>
+                <h3>Anti-Bacterial Cream</h3>
+                <p>Brand : Boroline</p>
+                <p>Rs. 100</p>
+                <button class="shop-btn" data-id="15">Shop now</button>
+            </div>
+
+            <div class="product-item" id="16">
+                <div class="image" style="background-image: url('seasons/rainy-season/16.Cetaphil\ US.png');"></div>
+                <h3>Lightweight Moisturizer</h3>
+                <p>Brand : Cetaphil</p>
+                <p>Rs. 1,000</p>
+                <button class="shop-btn" data-id="16">Shop now</button>
+            </div>
+
+            <div class="product-item" id="17">
+                <div class="image" style="background-image: url('seasons/rainy-season/17.Biotique\ Bio.png');"></div>
+                <h3>Monsoon Repair Cream</h3>
+                <p>Brand : Biotique</p>
+                <p>Rs. 300</p>
+                <button class="shop-btn" data-id="17">Shop now</button>
+            </div>
+
+            <div class="product-item" id="18">
+                <div class="image"
+                    style="background-image: url('seasons/rainy-season/18.Pilgrim\ Salicylic\ Acid\ &\ Niacinamide\ Oil\ Serum.png');">
+                </div>
+                <h3>Hydrating Serum</h3>
+                <p>Brand : Pilgrim</p>
+                <p>Rs. 800</p>
+                <button class="shop-btn" data-id="18">Shop now</button>
+            </div>
+
+            <div class="product-item" id="19">
+                <div class="image"
+                    style="background-image: url('seasons/rainy-season/19.Mamaearth\ Ubtan\ Ultra\ Light\ Gel\ Oil\ 200\ Ml.png');">
+                </div>
+                <h3>Oil-Free Gel</h3>
+                <p>Brand : Mamaearth</p>
+                <p>Rs. 500</p>
+                <button class="shop-btn" data-id="19">Shop now</button>
+            </div>
+
+            <div class="product-item" id="20">
+                <div class="image"
+                    style="background-image: url('seasons/rainy-season/20.pore\ toner\ by\ kiehls.png');"></div>
+                <h3>Purifying Toner</h3>
+                <p>Brand : Kiehl's</p>
+                <p>Rs. 2,000</p>
+                <button class="shop-btn" data-id="20">Shop now</button>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

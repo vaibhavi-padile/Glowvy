@@ -1,0 +1,239 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+/* NAVBAR STYLING */
+.nav {
+    display: flex;
+    font-size: 1.3rem;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 4rem;
+    padding-right: 3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.7rem;
+    background-color: rgb(235, 227, 218);
+    transition: transform 0.3s ease-in-out;
+}
+.nav i:hover{
+     color: rgb(214, 151, 78);
+     transform: scale(1.2);
+}
+
+/* NAV LOGO STYLING */
+.nav h1 {
+    font-size: 2.5rem;
+    margin-left: 35rem;
+    margin-right: 35rem;
+    font-family: Petit Formal Script;
+    font-weight: 900;
+}
+.nav a {
+    color: #333;
+    text-align: center;
+    font-size: 20px;
+} 
+/* Navbar hover effect */
+.navbar:hover {
+    background-color: rgb(212, 179, 141);
+}
+
+/* PANEL STYLING */
+.panel {
+    padding-left: 31rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    background-color: rgb(235, 227, 218);
+}
+
+/* Panel links */
+.panel a {
+    font-family: 'marcellus';
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+}
+
+/* Hover effect for panel links */
+.panel #a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(214, 151, 78);
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.panel #a:hover::before {
+    transform: scaleX(1);
+}
+
+/* Dropdown menu styling */
+.shop-by {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Dropdown container */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    border: 1px solid #cfcece;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+.shop-by:hover .dropdown{
+    display: block;
+}
+
+.dropdown:hover {
+    display: block;
+}
+
+/* Dropdown links styling */
+.dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    border-bottom: none;
+    border-radius: 8px;
+    background-color: white;
+}
+
+/* Remove border from last item */
+.dropdown a:last-child {
+    border-bottom: none;
+}
+
+/* Hover effect for dropdown links */
+.dropdown a:hover {
+    color: rgb(214, 151, 78);
+    
+}
+ .dropdown::-webkit-scrollbar {
+    display: none;
+}
+
+/* PAGE STYLLING */
+.seasons {
+    display: flex;
+    padding-top: 3rem;
+    padding-left: 35rem;
+    padding-right: 35rem;
+    padding-bottom: 3rem;
+}
+.seasons img {
+    display: flex;
+    height: 70%;
+    width: 75%;
+    border-radius: 6rem;
+    margin-bottom: 1rem;
+}
+.seasons a {
+   
+    text-decoration: none;
+    color: black;
+}
+
+.seasons span {
+    font-family: 'marcellus';
+    margin-left: 1.5rem;
+}
+.seasons span:hover{
+    color: rgb(214, 151, 78);
+}
+     
+
+/* Menu Section */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    /* max-width: 1100px; */
+    margin: 0 auto;
+}
+
+/* Menu Item Styles */
+.product-item {
+    background-color: rgb(245, 241, 233);
+    /* border-radius: 10px; */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    overflow: hidden;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-item:hover {
+    transform: translateY(1px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styles */
+.image {
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Text Styles */
+.product-item h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: rgb(214, 151, 78);
+    font-family: 'marcellus';
+}
+
+.product-item p {
+    font-size: 0.8rem;
+    margin: 0 10px 15px;
+    color: #555;
+    font-family: 'marcellus';
+
+}
+
+.shop-btn {
+    background-color: rgb(214, 151, 78);
+    border-radius: 6px;
+    padding: 10px;
+    color: white;
+    margin-bottom: 12px;
+    border: none;
+    font-family: 'marcellus';
+}
+
+.shop-btn:hover {
+    background-color: rgb(240, 137, 20);
+}

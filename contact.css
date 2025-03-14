@@ -1,0 +1,146 @@
+/* GENERAL STYLLING*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ARROW STYLLING */
+.arrow {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    color: black
+}
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-content {
+    flex: 2;
+    margin-right: 50px;
+    font-family: 'marcellus';
+}
+
+.contact-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact-content p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+    font-family: 'marcellus';
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    font-size: 16px;
+    color: #333;
+    font-family: 'marcellus';
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: none;
+}
+
+#contact-form button {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px;
+    align-self: flex-start;
+    font-family: 'marcellus';
+}
+
+#contact-form button:hover {
+    background: #007bff;
+}
+
+/* Support Section */
+.support-section {
+    flex: 1;
+    text-align: right;
+}
+
+.support-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'marcellus';
+}
+
+.support-section p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    font-family: 'marcellus';
+}
+
+.ticket-btn {
+    background: transparent;
+    border: 2px solid #333;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-family: 'marcellus';
+}
+
+.ticket-btn:hover {
+    background: #333;
+    color: white;
+}

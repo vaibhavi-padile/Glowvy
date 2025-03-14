@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skincare Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Shopping Cart Section -->
+        <div class="cart-section">
+            <div class="header">
+                <h1>SKINCARE CART.</h1>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+
+            <!-- Cart Items -->
+            <div class="cart-items">
+                <div class="cart-header">
+                    <span>Product</span>
+                    <span>Size</span>
+                    <span>Quantity</span>
+                    <span>Total Price</span>
+                </div>
+                <div id="cart-items-list"></div>
+            </div>
+
+            <!-- Cart Summary -->
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping:</span>
+                    <span id="shipping">$5.00</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="total">$5.00</span>
+                </div>
+            </div>
+
+            <button class="continue-shopping">← Continue Shopping</button>
+        </div>
+
+        <!-- Payment Info Section -->
+        <div class="payment-section">
+            <h2>Payment Info.</h2>
+            <div class="payment-methods">
+                <button class="payment-method active" data-method="credit">Credit Card</button>
+                <button class="payment-method" data-method="paypal">PhonePay</button>
+            </div>
+            <form id="payment-form">
+                <label>Name on Card</label>
+                <input type="text" placeholder="Name" required>
+                <label>Card Number</label>
+                <input type="text" placeholder="Number" required>
+                <div class="card-details">
+                    <div>
+                        <label>Expiration Date</label>
+                        <input type="text" placeholder="MM/YY" required>
+                    </div>
+                    <div>
+                        <label>CVV</label>
+                        <input type="text" placeholder="123" required>
+                    </div>
+                </div>
+            </form>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const cartItemsList = document.getElementById("cart-items");
+
+            function renderCart() {
+                cartItemsList.innerHTML = "";
+
+                if (cart.length === 0) {
+                    cartItemsList.innerHTML = "<p>Your cart is empty.</p>";
+                    updateSummary();
+                    return;
+                }
+
+                cart.forEach((item) => {
+                    let cartItem = document.createElement("div");
+                    cartItem.classList.add("cart-item");
+                    cartItem.innerHTML = `
+                        <div class="image" style="background-image: url('${item.image}')"></div>
+                        <h3>${item.name}</h3>
+                        <p>Rs. ${item.price} x ${item.quantity}</p>
+                        <button onclick="updateQuantity('${item.id}', -1)">-</button>
+                        <span>${item.quantity}</span>
+                        <button onclick="updateQuantity('${item.id}', 1)">+</button>
+                        <button onclick="removeItem('${item.id}')">Remove</button>
+                    `;
+                    cartItemsList.appendChild(cartItem);
+                });
+
+                updateSummary();
+            }
+
+            function updateQuantity(id, change) {
+                let item = cart.find(item => item.id == id);
+                if (item) {
+                    item.quantity += change;
+                    if (item.quantity <= 0) {
+                        cart = cart.filter(i => i.id !== id);
+                    }
+                    localStorage.setItem("cart", JSON.stringify(cart));
+                    renderCart();
+                }
+            }
+
+            function removeItem(id) {
+                cart = cart.filter(item => item.id !== id);
+                localStorage.setItem("cart", JSON.stringify(cart));
+                renderCart();
+            }
+
+            function updateSummary() {
+                let subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+                let shipping = cart.length > 0 ? 50 : 0;
+                let total = subtotal + shipping;
+
+                document.getElementById("subtotal").textContent = `Rs. ${subtotal.toFixed(2)}`;
+                document.getElementById("shipping").textContent = `Rs. ${shipping.toFixed(2)}`;
+                document.getElementById("total").textContent = `Rs. ${total.toFixed(2)}`;
+            }
+
+            renderCart();
+        });
+    </script>
+</body>
+
+</html>
